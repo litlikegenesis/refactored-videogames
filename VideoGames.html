@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Games</title>
+  </head>
+  <style>
+    body {
+      background: red;
+}
+
+    h1 {
+      text-align: center;
+      color: white;
+    }
+
+    h2 {
+      text-align: center;
+      color: white;
+    }
+
+    img {
+      width: 600px;
+      height: 400px;
+    }
+
+    p {
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      background: blue;
+      border-radius: 10px;
+      color: white;
+      padding: 20px;
+      margin: auto;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      border: 3px solid rgb(3, 255, 3);
+      background: yellow;
+      font-size: 24px;
+      border-radius: 6px;
+      padding: 10px 15px;
+      transition: all 150ms ease-in-out;
+    }
+
+    button:hover {
+        background: rgb(255, 0, 43);
+        border-color: purple;
+        color: white;
+        cursor: pointer;
+      }
+
+    .theme-button {
+        font-size: 20px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+        border-color: white;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+        border-color: black;
+        cursor: pointer;
+      }
+    
+      a {
+      color: white;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: rgb(255, 4, 255);
+        text-decoration: underline;
+      }
+
+    footer {
+      color: white;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .game-intro-picture {
+  border-radius: 10px;
+  transition: all 50ms ease-in-out;
+}
+
+.game-intro-picture:hover {
+  filter: hue-rotate(75deg);
+  transform: scale(1.2);
+}
+
+.grid {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  aspect-ratio: 100%;
+  height: auto; 
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  object-position: center; 
+  margin: 0;
+  height: 100%;
+
+}
+
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+
+      .dark {
+        background: purple;
+      }
+
+      .dark .container {
+        background: orange;
+        color: black;
+      }
+
+      .dark a {
+        color: blue;
+      }
+
+      .dark .game-intro-dark-picture {
+        border-radius: 10px;
+        transition: all 50ms ease-in-out;
+      }
+
+      .game-intro-dark-picture:hover {
+      filter: hue-rotate(75deg);
+      transform: scale(1.2);
+
+      .hidden {
+        display: none;
+      }
+}
+  </style>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <img id="light-picture" src="https://www.entertainmentearth.com/news/wp-content/uploads/2015/03/super-mario-64.png" alt="Image 1">
+    <div class="container">
+    <h1>🎮The World of Video Games🕹️</h1>
+    <h2>My Escape Rope from Reality</h2>
+
+    <img
+      src="https://www.entertainmentearth.com/news/wp-content/uploads/2015/03/super-mario-64.png"
+      alt=""
+      class="game-intro-picture"
+    />
+  
+    <div class="grid">
+    <img
+      src="https://umlconnector.com/wp-content/uploads/34385-Legend_of_Zelda_The_-_A_Link_to_the_Past_USA-10.jpg"
+      alt=""
+    />
+
+    <img
+      src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/MD_Sonic_the_Hedgehog.png/220px-MD_Sonic_the_Hedgehog.png"
+      alt=""
+    />
+
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcWYh85pvT1yWxKj-cNumJ8An5mijpqBV5kqHz8lvvxzO0x9Y4hFV_W8_VSQhLFUPsLTg&usqp=CAU"
+      alt=""
+    />
+
+    <img
+      src="https://i0.wp.com/onemorelevel.org/wp-content/uploads/2018/11/spyro-reignited-trilogy_20181109191424.png?w=1400&h=&ssl=1"
+      alt=""
+    />
+      <img id="#additionalPicture" src="https://i.ytimg.com/vi/n2IUxLiqh4w/maxresdefault.jpg"
+      alt=""
+      class="hidden"/>
+    </div>
+    <p>
+      A video game or computer game is an electronic game that involves
+      interaction with a user interface or input device (such as a joystick,
+      controller, keyboard, or motion sensing device) to generate visual
+      feedback from a display device, most commonly shown in a video format on a
+      television set, computer monitor, flat-panel display or touchscreen on
+      handheld devices, or a virtual reality headset. Most modern video games
+      are audiovisual, with audio complement delivered through speakers or
+      headphones, and sometimes also with other types of sensory feedback (e.g.,
+      haptic technology that provides tactile sensations). Some video games also
+      allow microphone and webcam inputs for in-game chatting and livestreaming.
+    </p>
+ 
+  </body>
+
+  <button>Learn About Video Games</button>
+<br />
+📖 Read on
+<a href="https://en.wikipedia.org/wiki/Video_game" target="_blank"> Wikipedia </a>
+</div>
+
+  <footer>Coded with 💖 by Whitney Reed</footer>
+
+  <script>
+    function changeTheme() {
+      let body = document.querySelector("body");
+    
+
+    body.classList.toggle("dark");
+  }
+
+  let themeButton = document.querySelector(".theme-button");
+  themeButton.addEventListener("click", changeTheme);
+
+const toggleButton = document.querySelector(".theme-button");
+const gameIntroPicture = document.querySelector(".game-intro-picture");
+const additionalPicture = document.querySelector("#additionalPicture");
+
+toggleButton.addEventListener('click', () => {
+  gameIntroPicture.classList.toggle("hidden");
+  additionalPicture.classList.toggle("hidden");
+});
+  </script>
+</html>
